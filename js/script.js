@@ -24,11 +24,36 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 Buon weekend e buon divertimento!
 */
+// ! operazioni prelminari.......
 
-// Prendo il bottone dal dom:
+// Prendo elementi dal dom:
+const grid = document.getElementById('grid')
 const button = document.getElementById('button');
 
-// all'interno del mio bottone creo la mia logica
-button.addEventListener('click', function () {
+// impostazioni iniziali;
+const rows = 10;
+const cols = 10;
+const totalCells = rows * cols;
+console.log(totalCells);
 
-})
+// ! operazioni d'avvio........
+
+//  TODO VERIFICO PRIMA SENZA INTERAGIRE CON IL BOTTONE
+// stampiamo le celle
+for (let i = 0; 1 < totalCells; i++) {
+
+    // creo una cella
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    grid.appendChild(cell);
+}
+
+
+
+
+
+// TODO INSERIAMO DOPO LA LOGICA QUI!!
+// all'interno del mio bottone creo la mia logica
+// button.addEventListener('click', function () {
+
+// })

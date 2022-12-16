@@ -19,7 +19,7 @@ h1 {
     width: 600px;
     height: 600px;
     margin: 60px auto;
-    border: 2px dashed black;
+    /* border: 2px dashed black; */
     align-content: flex-start;
 }
 
@@ -27,4 +27,9 @@ h1 {
     border: 2px solid black;
     height: calc(100% / 10);
     width: calc(100% / 10);
+    cursor: pointer;
+}
+
+#grid .cell.clicked {
+    background-color: aqua;
 }
