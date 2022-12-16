@@ -58,26 +58,36 @@ const totalCells = rows * cols;
 
 //  TODO VERIFICO PRIMA SENZA INTERAGIRE CON IL BOTTONE
 // stampiamo le celle
-for (let i = 1; i <= totalCells; i++) {
-    // creo una cella
-    const cell = createCell(i);
 
-    // metto un eventlistner per il colore
-    cell.addEventListener('click', function () {
-        cell.classList.add('clicked')
-        console.log(cell);
-    });
-
-    // appendo in pagina
-    grid.appendChild(cell);
-
-}
 
 
 
 
 // TODO INSERIAMO DOPO LA LOGICA QUI!!
+let isPlay = false;
+let change = '';
 // all'interno del mio bottone creo la mia logica
-// button.addEventListener('click', function () {
+button.addEventListener('click', function () {
+    for (let i = 1; i <= totalCells && !isPlay; i++) {
+        // creo una cella
+        const cell = createCell(i);
+        if () {
 
-// })
+        } else {
+
+
+        }
+
+        // metto un eventlistner per il colore
+        cell.addEventListener('click', function () {
+            cell.classList.add('clicked')
+            console.log(i);
+
+            // TODO = RIVEDI LEZIONE TOGGLE
+        });
+
+        // appendo in pagina
+        grid.appendChild(cell);
+
+    }
+})
