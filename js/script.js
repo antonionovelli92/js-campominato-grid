@@ -11,6 +11,13 @@ MILESTONE 3
 In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
 #MILESTONE 4
 Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
+
+
+
+
+
+
+
 BONUS
 Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
 - con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
@@ -24,6 +31,17 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 Buon weekend e buon divertimento!
 */
+// ! FUNZIONI
+
+function createCell(content) {
+    const cell = document.createElement('div');
+    cell.append(content);
+    cell.classList.add('cell');
+    return cell;
+}
+
+
+
 // ! operazioni prelminari.......
 
 // Prendo elementi dal dom:
@@ -34,20 +52,26 @@ const button = document.getElementById('button');
 const rows = 10;
 const cols = 10;
 const totalCells = rows * cols;
-console.log(totalCells);
+
 
 // ! operazioni d'avvio........
 
 //  TODO VERIFICO PRIMA SENZA INTERAGIRE CON IL BOTTONE
 // stampiamo le celle
-for (let i = 0; 1 < totalCells; i++) {
-
+for (let i = 1; i <= totalCells; i++) {
     // creo una cella
-    const cell = document.createElement('div');
-    cell.classList.add('cell');
-    grid.appendChild(cell);
-}
+    const cell = createCell(i);
 
+    // metto un eventlistner per il colore
+    cell.addEventListener('click', function () {
+        cell.classList.add('clicked')
+        console.log(cell);
+    });
+
+    // appendo in pagina
+    grid.appendChild(cell);
+
+}
 
 
 

@@ -19,7 +19,7 @@ h1 {
     width: 600px;
     height: 600px;
     margin: 60px auto;
-    /* border: 2px dashed black; */
+    border: 2px solid black;
     align-content: flex-start;
 }
 
@@ -28,6 +28,10 @@ h1 {
     height: calc(100% / 10);
     width: calc(100% / 10);
     cursor: pointer;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
 }
 
 #grid .cell.clicked {
