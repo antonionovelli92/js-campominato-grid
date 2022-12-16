@@ -24,3 +24,11 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 Buon weekend e buon divertimento!
 */
+
+// Prendo il bottone dal dom:
+const button = document.getElementById('button');
+
+// all'interno del mio bottone creo la mia logica
+button.addEventListener('click', function () {
+
+})

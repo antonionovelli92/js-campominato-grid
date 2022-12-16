@@ -3,8 +3,28 @@ img {
     height: 100%;
 }
 
+body {
+    background-color: aquamarine;
+
+}
+
 h1 {
     font-weight: bolder;
     display: inline;
     font-style: normal;
+}
+
+
+#grid {
+    width: 600px;
+    height: 600px;
+    margin: 60px auto;
+    border: 2px dashed black;
+    align-content: flex-start;
+}
+
+#grid .cell {
+    border: 2px solid black;
+    height: calc(100% / 10);
+    width: calc(100% / 10);
 }
