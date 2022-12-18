@@ -65,29 +65,28 @@ const totalCells = rows * cols;
 
 // TODO INSERIAMO DOPO LA LOGICA QUI!!
 let isPlay = false;
-let change = '';
+
 // all'interno del mio bottone creo la mia logica
 button.addEventListener('click', function () {
-    for (let i = 1; i <= totalCells && !isPlay; i++) {
-        // creo una cella
-        const cell = createCell(i);
-        if () {
+    if (isPlay) {
+        return;
+    } else {
+        isPlay = true;
+        for (let i = 1; i <= totalCells; i++) {
+            // creo una cella
+            const cell = createCell(i);
 
-        } else {
+            // metto un eventlistner per il colore
+            cell.addEventListener('click', function () {
+                cell.classList.add('clicked')
+                console.log(i);
 
+                // TODO = RIVEDI LEZIONE TOGGLE
+            });
+
+            // appendo in pagina
+            grid.appendChild(cell);
 
         }
-
-        // metto un eventlistner per il colore
-        cell.addEventListener('click', function () {
-            cell.classList.add('clicked')
-            console.log(i);
-
-            // TODO = RIVEDI LEZIONE TOGGLE
-        });
-
-        // appendo in pagina
-        grid.appendChild(cell);
-
     }
 })
